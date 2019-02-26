@@ -1,32 +1,21 @@
-# Parser para listas de Python
+# Parser para JSON
 
-Nesta tarefa, criaremos um pequeno parser de listas de Python. O programa
-receberá uma linha contendo uma lista, em notação Python, e deverá ser capaz de
-identificar se é uma lista válida ou se a sintaxe está incorreta. Caso seja uma
-lista válida, o programa deverá imprimir `OK\n` na tela. Caso seja inválida,
-deverá imprimir `ERRO\n`.
+Nesta tarefa, criaremos um pequeno parser de JSON. Ele receberá como entrada uma
+string e deverá escrever na tela `VALIDO\n` se tratar-se de uma string JSON
+válida e `INVALIDO\n` caso contrário.
 
-Uma lista, em Python, é definida como um sinal de abre-chave `[` seguida de
-uma sequência de elementos separadas por vírgula e, por fim, um sinal de
-fecha-chave `]`. Um elementos pode ser qualquer identificador válido de Python,
-mas neste
-exercício vamos nos restringir a inteiros, palavras e strings (veja os testes
-para verificar a sintaxe deles). Também, um elemento de uma lista pode ser uma
-lista. Listas vazias também são possíveis.
+Use os exemplos dos testes, e também fontes adicionais como [esses
+exemplos](https://www.json.org/example.html) e [os tutoriais da
+w3schools](https://www.w3schools.com/js/js_json_intro.asp) para entender como os
+documentos JSON funcionam.
 
 ## Informações adicionais
 O programa deverá ser escrito em Yacc/Bison e Lex/Flex.
 
-## Exemplos
-
-Entrada | Saida
-------- | -----
-`[]` | `OK\n`
-`[50 50 50]` | `ERRO\n`
-`[50, 50, 50` | `ERRO\n`
-`[50, 50, 50]` | `OK\n`
-`[50, 50, [50]]` | `OK\n`
-
+## Dicas
+Tente modelar um tipo de estrutura de cada vez. Qual é a estrutura mais interna
+que você vê? E depois dela? Como seria uma gramática para gerar recorrência? E
+assim por diante.
 
 ## Instruções adicionais
 
