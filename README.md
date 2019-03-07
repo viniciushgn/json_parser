@@ -7,7 +7,8 @@ válida e `INVALIDO\n` caso contrário.
 Use os exemplos dos testes, e também fontes adicionais como [esses
 exemplos](https://www.json.org/example.html) e [os tutoriais da
 w3schools](https://www.w3schools.com/js/js_json_intro.asp) para entender como os
-documentos JSON funcionam.
+documentos JSON funcionam. Também, há uma explicação mais técnica, usando
+gramáticas livres de contexto, [neste site](http://www.json.org/).
 
 ## Informações adicionais
 O programa deverá ser escrito em Yacc/Bison e Lex/Flex.
