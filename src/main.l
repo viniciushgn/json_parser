@@ -11,6 +11,8 @@ void yyerror(char *);
 %%
 
 
+[\n] { }
+
 \] {return ']';}
 
 \[ {return '[';}
@@ -22,7 +24,7 @@ void yyerror(char *);
 
 [,] {return ',';}
 
-[A-Za-z]+ {return LET;}
+
 
 \" {return '"';}
 
@@ -32,8 +34,12 @@ void yyerror(char *);
 
 \{ {return '{';}
 
-[[:space:]]+ { }
-[[:^space:]] { }
+
+\"(\\.|[^"\\])*\" { return LET;}
+
+
+
+. ; { }
 
 
 %%

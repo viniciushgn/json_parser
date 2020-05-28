@@ -7,7 +7,7 @@ void yyerror(char *c);
 int yylex(void);
 %}
 
-%token '[' ']''{''}'',''"'':' LET NUM
+%token '[' ']''{''}'',''"'':' LET NUM '\n'
 
 %%
 
@@ -15,23 +15,19 @@ S:
         JORJAO {printf("VALIDO\n");}
         ;
 
-STR:
-        LET {}
-        |LET LET {}
-        ;
 
 JORJAO:
         '{'JORGE'}' {}
         ;
 
 JORGE:
-        '"'STR'"'':'TOY {}
-        |JORGE','JORGE {}
+        JORGE','JORGE {}
+        |STR':'TOY {}
         ;
 
 TOY:
         NUM {}
-        |'"'STR'"' {}
+        |STR {}
         |JORJAO {}
         |MARCELA {}
         ;
@@ -41,13 +37,19 @@ MARCELA:
         ;
 
 GALAK:
-        '"'STR'"'{}
-        |NUM {}
+        NUM {}
+        |STR {}
         |GALAK','GALAK
         |MARCELA
         |
         ;
 
+
+
+STR:
+        LET {}
+        |LET LET {}
+        ;
 
 
 
