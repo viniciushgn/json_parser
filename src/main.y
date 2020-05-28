@@ -41,7 +41,7 @@ GALAK:
         |STR {}
         |GALAK','GALAK
         |MARCELA
-        |
+        |'['']'
         ;
 
 

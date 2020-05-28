@@ -35,7 +35,7 @@ void yyerror(char *);
 \{ {return '{';}
 
 
-\"(\\.|[^"\\])*\" { return LET;}
+\"(\\.|[^"\\])*\" {return LET;}
 
 
 
