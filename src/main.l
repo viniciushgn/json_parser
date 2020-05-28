@@ -11,6 +11,30 @@ void yyerror(char *);
 %%
 
 
+\] {return ']';}
+
+\[ {return '[';}
+
+
+
+[0-9]+ {return NUM;}
+[0-9]+[.][0-9]+ {return NUM;}
+
+[,] {return ',';}
+
+[A-Za-z]+ {return LET;}
+
+\" {return '"';}
+
+\: {return ':';}
+
+\} {return '}';}
+
+\{ {return '{';}
+
+[[:space:]]+ { }
+[[:^space:]] { }
+
 
 %%
 
